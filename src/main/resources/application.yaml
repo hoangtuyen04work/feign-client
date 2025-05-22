@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: feign-client-demo
+server:
+  port: 8080
+  servlet:
+    context-path: /feign-client
+app:
+  service:
+    user:
+      name: "user-service"
+      url: "http://localhost:8888/app"
