@@ -1,6 +1,7 @@
 package com.example.feign_client_demo.controller;
 
 import com.example.feign_client_demo.dto.ApiResponse;
+import com.example.feign_client_demo.dto.OB;
 import com.example.feign_client_demo.dto.UserResponse;
 import com.example.feign_client_demo.service.HomeService;
 import lombok.RequiredArgsConstructor;
@@ -16,12 +17,12 @@ public class HomeController {
     private HomeService homeService;
 
     @GetMapping("/info")
-    public Object info(@RequestParam String id) {
+    public ApiResponse<UserResponse> info(@RequestParam String id) {
         return homeService.getUserInfoById(id);
     }
 
     @GetMapping("/test")
-    public String info() {
+    public OB info() {
         return homeService.test();
     }
 }

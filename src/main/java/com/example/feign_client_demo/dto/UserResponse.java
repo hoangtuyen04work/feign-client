@@ -1,22 +1,19 @@
 package com.example.feign_client_demo.dto;
 
 import lombok.*;
-import lombok.experimental.FieldDefaults;
 
 import java.util.Date;
 
 @Builder
-@Getter
-@Setter
-@Data
 @AllArgsConstructor
 @NoArgsConstructor
-@FieldDefaults(level = AccessLevel.PRIVATE)
+@Getter
+@Setter
 public class UserResponse {
-    String id;
-    String userName;
-    String email;
-    String phone;
-    Date dob;
-    String address;
+    private String id;
+    private String userName;
+    private String email;
+    private String phone;
+    private Date dob;
+    private String address;
 }

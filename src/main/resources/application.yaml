@@ -8,5 +8,11 @@ server:
 app:
   service:
     user:
-      name: "user-service"
+      name: "app"
       url: "http://localhost:8888/app"
+
+logging:
+  level:
+    org.springframework.web: DEBUG
+    feign: DEBUG
+    com.example.feign_client_demo: DEBUG
